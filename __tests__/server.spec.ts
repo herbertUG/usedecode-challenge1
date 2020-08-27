@@ -14,6 +14,10 @@ describe('server', () => {
   it('reverses', done => {
     jsonist.get(urlBase + '/reverse/hello', (_, body) => {
       expect(body.msg).toEqual('olleh');
+      done();
+    });
+  });
+  
   it('responds uppercase', done => {
     jsonist.get(urlBase + '/uppercase?msg=hello', (_, body) => {
       expect(body.msg).toEqual('HELLO');

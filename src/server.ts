@@ -12,6 +12,8 @@ function handleReverse(req: Request, res: Response) {
       .reverse()
       .join(''),
   });
+}
+
 function handleUppercase(req: Request, res: Response) {
   const message = req.query.msg || 'no message given';
   res.json({ msg: message.toUpperCase() });
